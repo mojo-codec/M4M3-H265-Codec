@@ -1,0 +1,7 @@
+EXPORTS
+	DllMain PRIVATE
+	DriverProc
+	RegM4M3VFW
+	UnRegM4M3VFW
+
+	

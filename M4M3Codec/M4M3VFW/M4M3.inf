@@ -1,0 +1,92 @@
+; M4M3 H265 Video Codec install
+
+
+[Version]
+Signature = "$CHICAGO$"
+Class = MEDIA
+
+[SourceDisksNames]
+1="M4M3 H265 Codec Install Disk",, 0001
+
+[SourceDisksFiles]
+M4M3VFW.dll=1
+M4M3.inf=1
+
+[Installable.Drivers]
+M4M3 = 1:M4M3VFW.dll, "vidc.M4M3", "M4M3 H265 Codec" , , ,
+
+[DefaultInstall]
+CopyFiles=H265.Copy.Inf,H265.Copy
+Updateinis = H265.Updateini
+DelReg = H265.DelConfig
+addreg = H265.AddReg,H265.AddReg9x,H265.DoReg
+MediaType = SOFTWARE
+
+[DefaultInstall.ntx86]
+CopyFiles=H265.Copy.Inf,H265.Copy
+DelReg = H265.DelConfig
+addreg = H265.AddReg,H265.AddRegNT,H265.DoReg
+MediaType = SOFTWARE
+
+[Remove_M4M3]
+AddReg = H265.Unregister
+DelReg = H265.DelReg
+DelFiles = H265.Copy,H265.Copy.Inf
+UpdateInis = H265.DelIni
+
+[H265.Copy]
+M4M3VFW.dll
+
+[H265.Copy.Inf]
+M4M3.inf
+
+[H265.UpdateIni]
+system.ini, drivers32,,"vidc.M4M3=M4M3VFW.dll"
+
+[H265.DelIni]
+system.ini, drivers32,"vidc.M4M3=M4M3VFW.dll",
+
+[H265.AddReg]
+
+[H265.AddReg9x]
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\vidc.M4M3,Description,,%M4M3%
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\vidc.M4M3,Driver,,M4M3VFW.dll
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\vidc.M4M3,FriendlyName,,"M4M3"
+
+HKLM,%UnInstallPath%,DisplayName,,%UninstallDispName%
+HKLM,%UnInstallPath%,UninstallString,,"%10%\rundll.exe setupx.dll,InstallHinfSection Remove_M4M3 132 %17%\%InfFile%"
+
+[H265.AddRegNT]
+HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion\drivers.desc,M4M3VFW.dll,,%M4M3%
+HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion\drivers32,vidc.M4M3,,M4M3VFW.dll
+
+HKLM,%UnInstallPath%,DisplayName,,%UninstallDispName%
+HKLM,%UnInstallPath%,UninstallString,,"%11%\rundll32.exe setupapi,InstallHinfSection Remove_M4M3 132 %17%\%InfFile%"
+
+[H265.DoReg]
+;HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce\Setup,"Registering M4M3 Direct Show ;Decoder...",,"%11%\regsvr32.exe /s %11%\M4M3.ax"
+
+[H265.DelReg]
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\vidc.M4M3
+
+HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion\drivers.desc,M4M3VFW.dll,,""
+HKLM,%UnInstallPath%
+
+[H265.Unregister]
+;HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce\Setup,"Unregistering M4M3 Direct Show ;Decoder...",,"%11%\regsvr32.exe /s /u %11%\M4M3.ax"
+
+[H265.DelConfig]
+HKCU,Software\GNU\M4M3
+
+[DestinationDirs]
+DefaultDestDir = 11	; LDID_SYS
+H265.Copy = 11
+H265.Copy.Inf = 17
+
+[Strings]
+M4M3="M4M3 MPEG4 Codec"
+InfFile="M4M3.inf"
+UninstallDispName="M4M3 H265 Codec"
+UnInstallPath="Software\Microsoft\Windows\CurrentVersion\Uninstall\M4M3"
+MediaClassName="Media Devices"
+mfgname="mediawww.ee.ncku.edu.tw"

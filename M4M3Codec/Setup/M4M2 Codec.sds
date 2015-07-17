@@ -1,0 +1,50 @@
+[APPINFO]
+Name="M4M2 Codec"
+Version="0.8.0.2"
+Company="mojo office"
+Homepage="http://mediawww.ee.ncku.edu.tw/mojo"
+ShowLicense=1
+LicenseFile="Y:\H264\Setup\licence.txt"
+Reboot=0
+Destination="<ProgramFiles>\<AppName>"
+SerialCheck=0
+SerialFile=""
+PackageDest="C:\Program Files\SetupStream\M4M2"
+[ANNOUNCEMENT]
+CAV=0
+CA=0
+A=0
+AV=1
+[BUILD]
+Web=1
+CDDVD=0
+Compression=1
+[FILELIST]
+Destination0="<SystemRoot>\system32\M4M2DS.ax"
+Source0="Y:\Release\M4M2DS.ax"
+Package0="Required Files"
+Destination1="<SystemRoot>\system32\M4M2VFW.dll"
+Source1="Y:\Release\M4M2VFW.dll"
+Package1="Required Files"
+Destination2="<SystemRoot>\system32\M4M2Core.dll"
+Source2="Y:\Release\M4M2Core.dll"
+Package2="Required Files"
+[COMPATIBILITY]
+All=0
+Custom=1
+Win95=0
+Win98=0
+WinME=0
+WinNT4=0
+Win2000=1
+WinXP=1
+Unknown=0
+WinNET2003=1
+[POSTINSTALL]
+Item0="REGSVR32.EXE M4M2DS.ax /s"
+Item1="rundll32.exe M4M2VFW.dll,RegM4M2VFW"
+[PREUNINSTALL]
+Item0="REGSVR32.EXE M4M2DS.ax /u /s"
+Item1="rundll32.exe M4M2VFW.dll,UnRegM4M2VFW"
+[PACKAGES]
+Package0="Required Files"

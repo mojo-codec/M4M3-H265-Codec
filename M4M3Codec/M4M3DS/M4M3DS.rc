@@ -1,0 +1,170 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Traditional, Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,5,7
+ PRODUCTVERSION 1,0,5,7
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404b0"
+        BEGIN
+            VALUE "CompanyName", "mojo office"
+            VALUE "FileDescription", "M4M3 H.265 Direct show filter"
+            VALUE "FileVersion", "1, 0, 5, 7"
+            VALUE "InternalName", "M4M3  Decoder"
+            VALUE "LegalCopyright", "Copyright (C) 2002~ 2015 mojo  All rights reserved"
+            VALUE "OriginalFilename", "M4M3DS.ax"
+            VALUE "PrivateBuild", "Main Main10 MainStillPicture  profile"
+            VALUE "ProductName", "M4M3 H.265 Decoder"
+            VALUE "ProductVersion", "1, 0, 5, 7"
+            VALUE "SpecialBuild", "1.0.110507R"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "../M4M3logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_M4M3ABOUT           "about"
+END
+
+#endif    // Chinese (Traditional, Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_M4M3ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 192
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_M4M3ABOUT DIALOGEX 0, 0, 166, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CTEXT           "M4M3 Direct show filter",IDC_DSVER,7,66,151,11
+    CONTROL         107,IDC_LOGO,"Static",SS_BITMAP,30,6,107,55
+    CTEXT           "Copyright (C) 2002-2015 mojo",IDC_STATIC,7,153,151,9
+    CTEXT           "All Rights Reserved ",IDC_STATIC,7,163,151,11
+    CTEXT           "for educational purposes only,\n commercial purposes will not be  permitted",IDC_STATIC,7,173,151,25
+    CTEXT           "ver",IDC_M4M3VER,7,77,151,28
+    GROUPBOX        "",IDC_STATIC,7,107,151,45
+    LTEXT           "Disable deblocking",IDC_STATIC_AUTOSKIPDEBLOCKING,69,116,85,11,0,WS_EX_RTLREADING
+    COMBOBOX        IDC_COMBO_AUTOSKIPDEBLOCKING,16,115,46,39,CBS_DROPDOWN | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
