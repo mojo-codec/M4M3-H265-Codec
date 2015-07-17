@@ -1,0 +1,3 @@
+[submodule "M4M3-H265-Codec"]
+	path = M4M3-H265-Codec
+	url = https://github.com/mojo-codec/M4M3-H265-Codec.git
